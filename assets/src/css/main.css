@@ -1,0 +1,510 @@
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #222;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    margin: 1em 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: .2em 0;
+    padding: .2em 0;
+    color: #000;
+    background: #ccc;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    padding: 0 5% 10px;
+    color: white;
+}
+
+.footer-container footer {
+    padding: 20px 0;
+    color: white;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   My custom styles
+   ========================================================================== */
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+    /* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        margin-bottom: 0;
+        padding: 25px 2%;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+    /* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 .7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    /* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        box-shadow: 0 5px 10px #aaa;
+    }
+
+    /* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+    /* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 49%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+    /* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px;
+        /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    position: static;
+    overflow: visible;
+    clip: auto;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: ' ';
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Flashbag alerts
+   ========================================================================== */
+
+.alert {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.alert h4 {
+    margin-top: 0;
+    color: inherit;
+}
+
+.alert .alert-link {
+    font-weight: bold;
+}
+
+.alert > p,
+.alert > ul {
+    margin-bottom: 0;
+}
+
+.alert > p + p {
+    margin-top: 5px;
+}
+
+.alert-dismissable,
+.alert-dismissible {
+    padding-right: 35px;
+}
+
+.alert-dismissable .close,
+.alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit;
+}
+
+.alert-success {
+    color: #3c763d;
+    border-color: #d6e9c6;
+    background-color: #dff0d8;
+}
+
+.alert-success hr {
+    border-top-color: #c9e2b3;
+}
+
+.alert-success .alert-link {
+    color: #2b542c;
+}
+
+.alert-info {
+    color: #31708f;
+    border-color: #bce8f1;
+    background-color: #d9edf7;
+}
+
+.alert-info hr {
+    border-top-color: #a6e1ec;
+}
+
+.alert-info .alert-link {
+    color: #245269;
+}
+
+.alert-warning {
+    color: #8a6d3b;
+    border-color: #faebcc;
+    background-color: #fcf8e3;
+}
+
+.alert-warning hr {
+    border-top-color: #f7e1b5;
+}
+
+.alert-warning .alert-link {
+    color: #66512c;
+}
+
+.alert-danger {
+    color: #a94442;
+    border-color: #ebccd1;
+    background-color: #f2dede;
+}
+
+.alert-danger hr {
+    border-top-color: #e4b9c0;
+}
+
+.alert-danger .alert-link {
+    color: #843534;
+}
+
+.close {
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1;
+    float: right;
+    opacity: .2;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+}
+
+.close:hover,
+.close:focus {
+    cursor: pointer;
+    text-decoration: none;
+    opacity: .5;
+    color: #000;
+    filter: alpha(opacity=50);
+}
+
+button.close {
+    padding: 0;
+    cursor: pointer;
+    border: 0;
+    background: transparent;
+    -webkit-appearance: none;
+}
+
+.sr-only {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+.alertIn,
+.alertOut {
+    -webkit-transition: -webkit-transform .22s cubic-bezier(.25, 0, .25, 1), opacity .22s cubic-bezier(.25, 0, .25, 1);
+    -webkit-transition: opacity .22s cubic-bezier(.25, 0, .25, 1), -webkit-transform .22s cubic-bezier(.25, 0, .25, 1);
+    transition: opacity .22s cubic-bezier(.25, 0, .25, 1), -webkit-transform .22s cubic-bezier(.25, 0, .25, 1);
+    transition: transform .22s cubic-bezier(.25, 0, .25, 1), opacity .22s cubic-bezier(.25, 0, .25, 1);
+    transition: transform .22s cubic-bezier(.25, 0, .25, 1), opacity .22s cubic-bezier(.25, 0, .25, 1), -webkit-transform .22s cubic-bezier(.25, 0, .25, 1);
+}
+
+.alertIn.ng-hide-remove,
+.alertOut.ng-hide-add.ng-hide-add-active {
+    display: block !important;
+    -webkit-transform: translate3d(100px, 0px, 0px);
+    transform: translate3d(100px, 0px, 0px);
+    opacity: 0;
+}
+
+.alertOut.ng-hide-add,
+.alertIn.ng-hide-remove.ng-hide-remove-active {
+    display: block !important;
+    -webkit-transform: translate3d(0px, 0px, 0px);
+    transform: translate3d(0px, 0px, 0px);
+    opacity: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        color: #000 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: ' (' attr(href) ')';
+    }
+
+    abbr[title]:after {
+        content: ' (' attr(title) ')';
+    }
+
+    a[href^='#']:after,
+    a[href^='javascript:']:after {
+        content: '';
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

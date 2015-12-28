@@ -1,0 +1,27 @@
+{
+  "name": "weather-dashboard",
+  "version": "1.0.0",
+  "description": "Weather Dashboard app for Aquafadas",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://L0gIn@bitbucket.org/L0gIn/weather-dashboard.git"
+  },
+  "author": "Basile Trujillo",
+  "license": "",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-load-plugins": "latest",
+    "gulp-rename": "latest",
+    "gulp-csso": "latest",
+    "gulp-csscomb": "latest",
+    "gulp-cssbeautify": "latest",
+    "gulp-autoprefixer": "latest",
+    "gulp-cached": "latest",
+    "gulp-plumber": "latest",
+    "gulp-uglify": "latest"
+  }
+}

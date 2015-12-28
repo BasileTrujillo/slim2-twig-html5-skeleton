@@ -1,0 +1,29 @@
+{
+    "name": "L0gIn/slim-twig-laravel-html5-boilerplate",
+    "description": "A website boilerplate based on the Slim Framework, Twig, and a couple of useful Laravel Framework components.",
+    "license": "",
+    "authors": [
+        {
+            "name": "Basile TRUJILLO",
+            "email": "basiletrujillo@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/database": "4.1.*",
+        "illuminate/container": "4.1.*",
+        "illuminate/filesystem": "4.1.*",
+        "illuminate/session": "4.1.*",
+        "illuminate/support": "4.1.*",
+        "slim/slim": "2.5.*",
+        "slim/views": "0.1.*",
+        "twig/twig": "1.18.*",
+        "vlucas/phpdotenv": "1.1.*",
+        "components/zepto": "^1.1",
+        "components/normalize.css": "^3.0"
+    },
+    "autoload" : {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    }
+}
