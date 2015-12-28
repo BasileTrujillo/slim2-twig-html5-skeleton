@@ -142,4 +142,4 @@ The Laravel database component can be easily injected into Controllers:
 For further information on how to use the database object see https://github.com/laravel/docs/blob/4.1/database.md
 
 ###HTML5 Boilerplate
-@TODO...
+From a responsive template based on [initializr.com](http://www.initializr.com/)
