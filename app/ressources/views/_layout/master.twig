@@ -25,9 +25,12 @@
 
     <div class="main-container">
         <div class="main wrapper clearfix">
-            {% if message %}
-                <div class="alert {% if errors %}alert-danger{% else %}alert-success{% endif %}">{{ message }}</div>
-            {% endif %}
+            {% for type, bag in flashbag %}
+                {% for msg in bag %}
+                    <div class="alert alert-{{ type }}">{{ msg }}</div>
+                {% endfor %}
+            {% endfor %}
+
             {% block content %}{% endblock %}
         </div>
     </div>

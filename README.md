@@ -1,10 +1,10 @@
 #Website Boilerplate
 
-This website boilerplate is based on the [Slim Framework](http://www.slimframework.com/), Twig and a couple of useful Laravel Framework components.
+This website boilerplate is based on the [Slim 2 Framework](http://www.slimframework.com/), Twig and a couple of useful Laravel Framework components.
 
 ##Why?
 
-As many frameworks provide quite a lot of components and features that seem to be overhead in small projects, the Slim Framework provide a lightweight and powerfull system.
+As many frameworks provide quite a lot of components and features that seem to be overhead in small projects, the Slim 2 Framework provide a lightweight and powerfull system.
 
 I recommand to use it with PHP 5.6 or 7 (not fully tested yet)
 
@@ -15,7 +15,7 @@ The following tools and concepts are used :
 
  * [Composer](https://getcomposer.org/) to load external libraries
  * [Gulp](http://gulpjs.com/) to manage asset deployement (and other nice stuffs).
- * [Slim Framework](http://www.slimframework.com/) to manage routing.
+ * [Slim 2 Framework](http://www.slimframework.com/) to manage routing.
  * [PHP dotenv](https://github.com/vlucas/phpdotenv) to load environement config
  * [Laravel framework components](http://www.laravel.com/docs) from version 4.x, as these require PHP 5.3 only
      * [IoC Container](https://github.com/illuminate/container) which allows automatic dependency injection of Controller constructor parameters

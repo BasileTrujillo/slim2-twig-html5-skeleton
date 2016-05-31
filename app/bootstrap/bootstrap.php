@@ -38,31 +38,61 @@ $container->alias('\App\Components\Config\Config', 'config');
 // Slim application setup
 $container->singleton('Slim\\Slim', function ($container) use ($config)
 {
-    $app = new \Slim\Slim(array(
-        'debug' => $config->get('app.debug'),
+    $slimConf = array(
         'mode' => $config->get('app.mode'),
         'log.enabled' => $config->get('app.logging.enabled'),
         'log.level' => $config->get('app.logging.level'),
         'log.writer' => new \App\Components\Logging\FileSystemLogWriter(__BASE_DIR . 'app/storage/logs/' . date('ymd') . '.log'),
         'templates.path' => __BASE_DIR . 'app/ressources/views',
-        'view' => new \Slim\Views\Twig(),
         'assets.path' => $config->get('assets.'.$config->get('app.mode')),
         'misc.conf' => $config->get('misc'),
-    ));
-
-    // Twig template engine setup
-    $app->view()->parserOptions = array(
-        'debug' => $config->get('app.debug'),
-        'cache' => __BASE_DIR . 'app/storage/cache/views'
     );
 
-    $twigExtensions = array(
-        new \Slim\Views\TwigExtension()
-    );
-    if ($config->get('app.debug')) {
-        $twigExtensions[] = new Twig_Extension_Debug();
+    if (php_sapi_name() !== 'cli') {
+        $slimConf['debug'] = $config->get('app.debug');
+        $slimConf['view'] = new \Slim\Views\Twig();
     }
-    $app->view()->parserExtensions = $twigExtensions;
+
+    $app = new \Slim\Slim($slimConf);
+
+    if (php_sapi_name() !== 'cli') {
+        // Twig template engine setup
+        $app->view()->parserOptions = array(
+            'debug' => $config->get('app.debug'),
+            'cache' => __BASE_DIR . 'app/storage/cache/views'
+        );
+
+        $twigExtensions = array(
+            new \Slim\Views\TwigExtension()
+        );
+        if ($config->get('app.debug')) {
+            $twigExtensions[] = new Twig_Extension_Debug();
+        }
+        $app->view()->parserExtensions = $twigExtensions;
+    }
+    else {
+        array_shift($GLOBALS['argv']);
+        $argv = $GLOBALS['argv'];
+        $pathInfo = '/' . implode('/', $argv);
+
+        // Set up the environment so that Slim can route
+        $app->environment = Slim\Environment::mock([
+            'PATH_INFO'   => $pathInfo
+        ]);
+
+        // CLI-compatible not found error handler
+        $app->notFound(function () use ($app) {
+            $url = $app->environment['PATH_INFO'];
+            echo "Error: Cannot route to $url";
+            $app->stop();
+        });
+
+        // Format errors for CLI
+        $app->error(function (\Exception $e) use ($app) {
+            echo $e;
+            $app->stop();
+        });
+    }
 
     // Laravel session component start and shutdown configuration
     $app->hook('slim.before', function ($container) use ($container)
