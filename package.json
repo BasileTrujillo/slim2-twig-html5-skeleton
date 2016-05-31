@@ -1,17 +1,16 @@
 {
-  "name": "weather-dashboard",
-  "version": "1.0.0",
-  "description": "Weather Dashboard app for Aquafadas",
+  "name": "slim-twig-laravel-html5-boilerplate",
+  "version": "1.0.2",
+  "description": "Slim-Twig-Laravel-HTML5 Boilerplate",
   "main": "index.php",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://L0gIn@bitbucket.org/L0gIn/weather-dashboard.git"
+    "url": "https://bitbucket.org/L0gIn/slim-twig-laravel-html5-boilerplate.git"
   },
-  "author": "Basile Trujillo",
-  "license": "",
+  "author": "L0gIn",
   "devDependencies": {
     "gulp": "latest",
     "gulp-load-plugins": "latest",
