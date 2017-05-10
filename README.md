@@ -1,14 +1,14 @@
-#Website Boilerplate
+# Website Boilerplate
 
 This website boilerplate is based on the [Slim 2 Framework](http://www.slimframework.com/), Twig and a couple of useful Laravel Framework components.
 
-##Why?
+## Why?
 
 As many frameworks provide quite a lot of components and features that seem to be overhead in small projects, the Slim 2 Framework provide a lightweight and powerfull system.
 
 I recommand to use it with PHP 5.6 or 7 (not fully tested yet)
 
-##Included componants
+## Included componants
 
 This project starter with a mix of good practices within differents boilerplates.
 The following tools and concepts are used :
@@ -25,16 +25,16 @@ The following tools and concepts are used :
  * [Zepto.JS](http://zeptojs.com/) to have a lightweight cross-browser JS library.
  * [apiDoc](https://github.com/apidoc/apidoc) to generate web service documentation
 
-##Installation
+## Installation
 
 For installation execute the following commands :
 
     $ git clone https://bitbucket.org/L0gIn/slim-twig-laravel-html5-boilerplate.git .
     $ composer install
 
-##Docs
+## Docs
 
-###Configuration
+### Configuration
 
 The application can be easily configured using the *app/config/config.php* file.
 
@@ -42,7 +42,7 @@ There are defined a couple of configuration values by default. They can be chang
 
 The configuration object is available as as *$config* inside routes.php and can be injected into Controllers by using the *\App\Components\Config\Config $config* parameter.
 
-####Environment based configuration
+#### Environment based configuration
 
 Within the application base directory exists a *.env.example* file, which can be used for environment based configuration.
 
@@ -50,7 +50,7 @@ Simply rename the file to *.env* and adjust the settings. Settings are read from
 
 For further information see: [https://github.com/vlucas/phpdotenv](https://github.com/vlucas/phpdotenv)
 
-####Database
+#### Database
 
 There are default MSQL database credentials provided within the *app/config/config.php* file as a fallback for development systems.
 You have to set db config by adding following lines into *.env* file.
@@ -59,7 +59,7 @@ You have to set db config by adding following lines into *.env* file.
     database.username=foo
     database.password=bar
 
-###Dependency Injection
+### Dependency Injection
 
 The website boilerplate makes use of Laravel's *IoC (Inversion of Control)* component, which allows automatic dependency injection of Controller constructor parameters.
 
@@ -90,7 +90,7 @@ Note, that it is possible to automatically load any resource from the IoC contai
 
 Further information can be found at http://laravel.com/docs/4.1/ioc
 
-###Routing
+### Routing
 
 A simple router class as a wrapper for the *Slim\Slim* application class is available within the *routes.php* file as *$router*.
 
@@ -106,7 +106,7 @@ It provides a simple way to add controller based routing:
         echo htmlspecialchars($something);
     });
 
-###Database
+### Database
 
 The Laravel database component can be easily injected into Controllers:
 
@@ -141,5 +141,5 @@ The Laravel database component can be easily injected into Controllers:
 
 For further information on how to use the database object see https://github.com/laravel/docs/blob/4.1/database.md
 
-###HTML5 Boilerplate
+### HTML5 Boilerplate
 From a responsive template based on [initializr.com](http://www.initializr.com/)
